@@ -588,6 +588,12 @@ function animate(timestamp) {
     });
 
   }
+
+  if( endDOM.style.visibility == 'visible'){
+    console.log("MOVES ARE ENDED");
+    stepStartTimestamp = moves.length === 0 ? null : timestamp;
+  };
+
   renderer.render( scene, camera );	
 }
 
